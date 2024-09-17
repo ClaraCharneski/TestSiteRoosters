@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Manna Roosters</title>
+    <style class="fontes">
+        @font-face {
+            font-family: art;
+            src: url(ARDESTINE.ttf);
+        }
+
+        @font-face {
+            font-family: glacial;
+            src: url(GlacialIndifference-Regular.otf);
+        }
+    </style>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: glacial;
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+            text-align: center;
+            background-image: url('img/OffSeason.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: scroll;
+            margin: 0 auto;
+            display: grid;
+            place-items: center;
+        }
+
+        h1 {
+            font-family: art;
+            font-size: 500%;
+            color: white;
+            text-align: center;
+            padding-top: 5%;
+            font-weight: normal;
+        }
+
+        h2 {
+            font-size: 140%;
+            color: white;
+            text-align: center;
+            font-weight: normal;
+        }
+
+        h3 {
+            font-size: 230%;
+            color: white;
+            text-align: center;
+            margin: 6% 20%;
+            border-bottom: 1px solid white;
+            font-weight: normal;
+        }
+
+        p {
+            color: white;
+            margin: 2% 4%;
+            font-size: 100%;
+            text-align: left;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+    </style>
+
+    <style class="barra-nav">
+        .main {
+            padding: 0;
+            width: 100%;
+            margin: 0 auto;
+            background: black;
+            border-bottom: 4px solid white;
+        }
+
+        .main a {
+            color: white;
+            text-decoration: underline;
+            font-weight: normal;
+            font-size: 120%;
+        }
+
+        .main li {
+            margin: 0 10%;
+        }
+
+        .main ul {
+            display: flex;
+            margin: 0 5%;
+            justify-content: center;
+        }
+
+        .container {
+            display: flex;
+            max-width: 100%;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logoroosters {
+            width: 5%;
+            height: 5%;
+            margin: 0 3%;
+        }
+
+        .settings {
+            width: 10%;
+            height: 10%;
+            margin: 0 3%;
+        }
+    </style>
+
+    <style class="quadro-nav">
+        .frame {
+            width: 50%;
+            height: 100%;
+            padding: 3% 0;
+            background-color: rgb(0, 0, 0, .5);
+            border-radius: 10%;
+            /*background-image: url('img/OffSeason1.png');
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-attachment: scroll;
+            background-position: center;*/
+            margin: 0 auto;
+        }
+
+        .main2 a {
+            color: white;
+            text-decoration: underline;
+            font-weight: normal;
+            font-size: 120%;
+        }
+
+        .main2 li {
+            display: inline-block;
+            margin: 0 auto;
+            padding: 0 4%;
+        }
+
+        .quadro {
+            display: inline-block;
+            margin: 0 auto;
+            padding: 5% 0;
+        }
+
+        .sobre {
+            width: 25%;
+            height: 25%;
+            padding: 0 6%;
+        }
+
+        .competition {
+            width: 25%;
+            height: 25%;
+            padding: 0 6%;
+        }
+
+        .patrocinio {
+            width: 25%;
+            height: 25%;
+            padding: 0 6%;
+        }
+    </style>
+
+    <style class="textos">
+        .text {
+            width: 100%;
+            margin: 0 auto;
+            margin-top: 6%;
+            background-color: black;
+            padding: 0 3%;
+        }
+
+        .ps {
+            display: flex;
+            margin: 0 auto;
+            justify-content: space-evenly;
+        }
+
+        .p1 {
+            width: 50%;
+        }
+
+        .frc {
+            width: 20%;
+            height: 20%;
+        }
+
+        .areas {
+            width: 30%;
+            image-resolution: 100%;
+        }
+
+        .legenda {
+            width: 60%;
+            padding-top: 5%;
+            image-resolution: 100%;
+        }
+    </style>
+
+    <style class="fotos-nav">
+        .list {
+            margin: 5% 10%;
+            display: flex;
+            gap: 0.25rem;
+            transform-style: preserve-3d;
+            list-style-type: none;
+
+            &:hover :not(:hover) {
+                margin: 0 -20px;
+                transform: perspective(500px) rotateY(45deg) scale(0.95);
+            }
+
+            &:hover :not(:hover)::after {
+                opacity: 0.4;
+            }
+        }
+
+        .item {
+            position: relative;
+            width: 200px;
+            aspect-ratio: 3/4;
+            border-radius: 0.5rem;
+            background-size: cover;
+            background-position: center;
+            transition: margin 0.5s, transform 0.5s;
+
+
+            &:nth-of-type(1) {
+                background-image: url("img/ADM.JPG");
+            }
+
+            &:nth-of-type(2) {
+                background-image: url("img/Elétrica.jpeg");
+            }
+
+            &:nth-of-type(3) {
+                background-image: url("img/Marketing.JPG");
+            }
+
+            &:nth-of-type(4) {
+                background-image: url("img/Mecânica.jpeg");
+            }
+
+            &:nth-of-type(5) {
+                background-image: url("img/Programação.jpg");
+            }
+
+            &:hover~.item {
+                transform: perspective(500px) rotateY(-45deg) scale(0.95);
+            }
+
+            &:hover {
+                transform: perspective(500px) rotateY(0) scale(1.2);
+            }
+
+        }
+
+        .name-list {
+            display: flex;
+            justify-content: space-around;
+            font-weight: bold;
+            border: 1px solid white;
+            margin: 0 10%;
+        }
+    </style>
+
+    <style class="roda-pe">
+        .rodape {
+            width: 100%;
+            padding: 3% 0;
+            margin: 0 auto;
+            background-color: #09003a;
+            align-items: center;
+        }
+
+        .first {
+            width: 10%;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="main">
+
+        <div class="container">
+            <img src="img/Logo1.jpg" alt="Logo do Manna Roosters" class="logoroosters">
+
+            <ul>
+                <li>
+                    <a href="mentors.html">Mentores</a>
+                </li>
+
+                <li>
+                    <a href="robots.html">Robôs</a>
+                </li>
+
+                <li>
+                    <a href="resources.html">Recursos</a>
+                </li>
+
+                <li>
+                    <a href="projects.html">Projetos</a>
+                </li>
+            </ul>
+            
+            <input type="checkbox" id="chec">
+            <label for="chec">
+                <img src="img/settings.png" alt="Configurações" class="settings">
+            </label>
+            <nav>
+                <ul>
+                    <li><a href="">Idioma</a></li>
+                    <li><a href="ajuda.html">Ajuda</a></li>
+                </ul>
+            </nav>
+        </div>
+
+
+    </nav>
+    <h1>MANNA ROOSTERS</h1>
+
+    <div class="frame">
+        <h2>We are Roosters and we annouce a new day.</h2>
+        <div class="quadro">
+
+            <img src="img/Sobre.png" alt="Pessoas" class="sobre">
+            <img src="img/Competition.png" alt="Troféu" class="competition">
+            <img src="img/Patrocinio.png" alt="Mãos" class="patrocinio">
+
+        </div>
+        <nav class="main2">
+            <ul>
+
+                <li>
+                    <a href="sobre.html">Sobre</a>
+                </li>
+
+                <li>
+                    <a href="competition.html">Competições</a>
+                </li>
+
+                <li>
+                    <a href="sponsorship.html">Patrocínio</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <section class="text">
+        <img scr="img/first.jpg" class="first">
+
+        <h3>OQUE É A FIRST?</h3>
+        <section class="ps">
+            <img src="img/FIRST FRC.png" class="frc">
+            <div class="p1">
+                <p>A FIRST® é uma ONG sem fins lucrativos que tem como objetivo criar e preparar a nova geração de
+                    líderes e profissionais capazes de criar soluções para os grandes problemas que assolam nossa
+                    sociedade nos dias atuais.</p>
+                <p>Para cumprir essa meta, a FIRST® desenvolveu um currículo completo que visa empoderar seus
+                    estudantes, dando a eles conhecimento técnico nas áreas de ciência e tecnologia, bem como as
+                    habilidades necessárias para esses se tornarem criadores de soluções inovadoras: noção de liderança,
+                    valores humanos, trabalho em equipe, análise e resolução de problemas, proatividade, entre diversas
+                    outras.
+                </p>
+            </div>
+        </section>
+
+        <h3>DIVISÃO DE ÁREAS</h3>
+        <section class="ps">
+            <div class="p1">
+                <p>Atualmente, trabalhamos na Instituição Colégio Estadual Padre Cláudio Morelli e atuamos na
+                    Instituição Manna Team, e por condições de mudanças da equipe para uma evolução, foi testado
+                    diversas maneiras
+                    de separação de áreas e preferências nas demandas de trabalhos. E chegamos em uma opção que nos
+                    ajudou.
+                <p>Nossa divisão de áreas foi proposta e realizada por nosso atual técnico Thadeu Miqueletto, onde
+                    trouxe muitas evoluções e organização para nossa equipe.</p>
+                <img src="img/Separação de áreas1.png" alt="legenda" class="legenda">
+            </div>
+            <img src="img/Separação de áreas.jpg" alt="Gráfico" class="areas">
+        </section>
+
+        <div class="name-list">
+            <p>Administrativo</p>
+            <p>Elétrica</p>
+            <p>Marketing</p>
+            <p>Mecânica</p>
+            <p>Programação</p>
+        </div>
+
+        <ul>
+            <div class="list">
+                <li class='item'></li>
+                <li class='item'></li>
+                <li class='item'></li>
+                <li class='item'></li>
+                <li class='item'></li>
+            </div>
+        </ul>
+    </section>
+
+    <div class="rodape">
+        <img src="img/FIRST.jpg" class="fist">
+    </div>
+
+</body>
+
+</html>
